@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mc-app
-        image: lakshmanarao18/devops-frontend:lak
+        image: lakshmanarao18/devops-frontend:7
         ports:
         - containerPort: 8080
