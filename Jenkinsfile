@@ -51,6 +51,11 @@ pipeline {
                     git config user.name "Lakshmanarao"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s/devops-frontend:.*/devops-frontend:${BUILD_NUMBER}/g" deployment.yaml
+                    git add .
+                    
+                    git commit -m "Update deployment image to version ${BUILD_NUMBER}"
+
+                    git push https://${githubtocken}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                     '''
                 }
             }
