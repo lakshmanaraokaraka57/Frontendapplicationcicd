@@ -16,10 +16,6 @@ spec:
     spec:
       containers:
       - name: mc-app
-<<<<<<< HEAD
         image: devopshubg333/batch13:5
-=======
-        image: lakshmanarao18/devops-frontend:9
->>>>>>> 6d825061fea1ebe3f97172e2efd4d1eafc28df7e
         ports:
         - containerPort: 8080
