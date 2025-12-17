@@ -40,12 +40,12 @@ pipeline {
         }
         stage('Update Deployment File'){
             environment{
-                GIT_REPO_NAME = 'cicd-deploymentfiles'
+                GIT_REPO_NAME = 'Frontendapplicationcicd'
                 GIT_USER_NAME = 'lakshmanaraokaraka57'
             }
             steps{
                 echo ' Update Deployment Manifest Files'
-                withCredentials([string(credentialsId: 'githubtoken', variable: 'githubtoken')]) {
+                withCredentials([string(credentialsId: 'githubtocken', variable: 'githubtocken')]) {
                     sh '''
                     git config user.email "lasyakaraka@gmail.com"
                     git config user.name "Lakshmanarao"
